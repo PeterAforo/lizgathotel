@@ -1,6 +1,6 @@
 import {
   GoogleGenerativeAI,
-  FunctionDeclarationSchemaType,
+  SchemaType,
   type FunctionDeclaration,
   type Part,
   type Content,
@@ -196,10 +196,10 @@ const functionDeclarations: FunctionDeclaration[] = [
     description:
       "Get the list of available rooms at the hotel with their current prices, descriptions, and availability. Call this when a guest asks about rooms or wants to make a booking.",
     parameters: {
-      type: FunctionDeclarationSchemaType.OBJECT,
+      type: SchemaType.OBJECT,
       properties: {
         category: {
-          type: FunctionDeclarationSchemaType.STRING,
+          type: SchemaType.STRING,
           description:
             "Optional room category filter: 'standard', 'deluxe', 'executive', 'family', 'presidential', 'honeymoon'. Leave empty to get all rooms.",
         },
@@ -211,42 +211,42 @@ const functionDeclarations: FunctionDeclaration[] = [
     description:
       "Create a new hotel booking/reservation. Only call this AFTER confirming all details with the guest. This will save the booking to the database and send a confirmation email.",
     parameters: {
-      type: FunctionDeclarationSchemaType.OBJECT,
+      type: SchemaType.OBJECT,
       properties: {
         roomSlug: {
-          type: FunctionDeclarationSchemaType.STRING,
+          type: SchemaType.STRING,
           description: "The slug of the room to book (e.g. 'standard-room', 'deluxe-room', 'executive-suite', 'family-room', 'presidential-suite', 'honeymoon-suite')",
         },
         checkIn: {
-          type: FunctionDeclarationSchemaType.STRING,
+          type: SchemaType.STRING,
           description: "Check-in date in YYYY-MM-DD format",
         },
         checkOut: {
-          type: FunctionDeclarationSchemaType.STRING,
+          type: SchemaType.STRING,
           description: "Check-out date in YYYY-MM-DD format",
         },
         guests: {
-          type: FunctionDeclarationSchemaType.NUMBER,
+          type: SchemaType.NUMBER,
           description: "Number of guests",
         },
         firstName: {
-          type: FunctionDeclarationSchemaType.STRING,
+          type: SchemaType.STRING,
           description: "Guest's first name",
         },
         lastName: {
-          type: FunctionDeclarationSchemaType.STRING,
+          type: SchemaType.STRING,
           description: "Guest's last name",
         },
         email: {
-          type: FunctionDeclarationSchemaType.STRING,
+          type: SchemaType.STRING,
           description: "Guest's email address for confirmation",
         },
         phone: {
-          type: FunctionDeclarationSchemaType.STRING,
+          type: SchemaType.STRING,
           description: "Guest's phone number",
         },
         specialRequests: {
-          type: FunctionDeclarationSchemaType.STRING,
+          type: SchemaType.STRING,
           description: "Any special requests from the guest (optional)",
         },
       },
