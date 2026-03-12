@@ -1,10 +1,4 @@
-import {
-  GoogleGenerativeAI,
-  SchemaType,
-  type FunctionDeclaration,
-  type Part,
-  type Content,
-} from "@google/generative-ai";
+import { GoogleGenerativeAI, SchemaType } from "@google/generative-ai";
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 import { generateBookingRef } from "@/lib/booking-ref";
@@ -190,7 +184,8 @@ All rooms include: Free Wi-Fi, air conditioning, flat-screen TV, minibar, in-roo
 13. After a successful booking, thank the guest warmly and mention the confirmation email.`;
 
 // ─── Gemini function declarations for tool use ────────────────────────────────
-const functionDeclarations: FunctionDeclaration[] = [
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const functionDeclarations: any[] = [
   {
     name: "get_available_rooms",
     description:
@@ -458,9 +453,9 @@ export async function POST(req: NextRequest) {
     });
 
     // Convert message history to Gemini format
-    const history: Content[] = messages.slice(0, -1).map((msg: { sender: string; text: string }) => ({
+    const history = messages.slice(0, -1).map((msg: { sender: string; text: string }) => ({
       role: msg.sender === "user" ? "user" : "model",
-      parts: [{ text: msg.text }] as Part[],
+      parts: [{ text: msg.text }],
     }));
 
     const chat = model.startChat({ history });
@@ -516,10 +511,11 @@ export async function POST(req: NextRequest) {
     const text = response.text();
 
     return NextResponse.json({ message: text });
-  } catch (error) {
-    console.error("[Chat API] Error:", error);
+  } catch (error: unknown) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error("[Chat API] Error:", errMsg, error);
     return NextResponse.json(
-      { error: "Failed to get response. Please try again." },
+      { error: `Failed to get response: ${errMsg}` },
       { status: 500 }
     );
   }
