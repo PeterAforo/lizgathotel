@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
 import ChatMessage from "./ChatMessage";
 import type { Message } from "./ChatMessage";
-import { findResponse } from "@/data/chatbotResponses";
 
 const INITIAL_MESSAGE: Message = {
   id: "welcome",
@@ -31,7 +30,7 @@ export default function ChatWindow() {
     }
   }, [messages, isTyping]);
 
-  const sendMessage = (text: string) => {
+  const sendMessage = async (text: string) => {
     if (!text.trim()) return;
 
     const userMessage: Message = {
@@ -41,23 +40,42 @@ export default function ChatWindow() {
       timestamp: new Date(),
     };
 
-    setMessages((prev) => [...prev, userMessage]);
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
     setInput("");
     setIsTyping(true);
 
-    // Simulate bot thinking delay
-    setTimeout(() => {
-      const response = findResponse(text);
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          messages: updatedMessages
+            .filter((m) => m.id !== "welcome")
+            .map((m) => ({ sender: m.sender === "bot" ? "model" : "user", text: m.text })),
+        }),
+      });
+
+      const data = await res.json();
+
       const botMessage: Message = {
         id: `bot-${Date.now()}`,
-        text: response.response,
+        text: data.message || data.error || "Sorry, I couldn't process that. Please try again.",
         sender: "bot",
-        quickReplies: response.quickReplies,
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, botMessage]);
+    } catch {
+      const errorMessage: Message = {
+        id: `bot-${Date.now()}`,
+        text: "I'm having trouble connecting right now. Please try again, or contact our front desk at +233 30 277 5500.",
+        sender: "bot",
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, errorMessage]);
+    } finally {
       setIsTyping(false);
-    }, 800 + Math.random() * 700);
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
