@@ -8,8 +8,8 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 
 const heroImages = [
-  "/images/environs/005.jpg",
   "/images/environs/009.jpg",
+  "/images/environs/005.jpg",
   "/images/environs/011.jpg",
 ];
 
