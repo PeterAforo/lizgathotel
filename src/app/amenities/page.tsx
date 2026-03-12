@@ -41,7 +41,7 @@ export default function AmenitiesPage() {
     return (
       <PageTransition>
         <section className="relative h-[40vh] min-h-[300px]">
-          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80" alt="Amenities" className="h-full w-full object-cover" />
+          <img src="/images/environs/010.jpg" alt="Amenities" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-dark/60" />
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             <h1 className="font-sans text-4xl font-bold text-white md:text-6xl">Amenities</h1>
@@ -59,7 +59,7 @@ export default function AmenitiesPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[300px]">
         <img
-          src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80"
+          src="/images/environs/010.jpg"
           alt="Amenities"
           className="h-full w-full object-cover"
         />

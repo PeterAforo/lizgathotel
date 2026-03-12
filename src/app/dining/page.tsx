@@ -63,7 +63,7 @@ export default function DiningPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[300px]">
         <img
-          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80"
+          src="/images/restaurant/033.jpg"
           alt="Dining"
           className="h-full w-full object-cover"
         />
@@ -84,7 +84,7 @@ export default function DiningPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <AnimatedSection animation="fadeLeft">
               <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80"
+                src="/images/restaurant/028.jpg"
                 alt="Restaurant interior"
                 className="h-[400px] w-full object-cover"
               />

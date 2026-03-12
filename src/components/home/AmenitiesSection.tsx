@@ -1,13 +1,8 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState, useEffect } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { getIcon } from "@/lib/icons";
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface DBamenity {
   id: string;
@@ -20,32 +15,18 @@ interface DBamenity {
 }
 
 export default function AmenitiesSection() {
-  const gridRef = useRef<HTMLDivElement>(null);
   const [amenities, setAmenities] = useState<DBamenity[]>([]);
 
   useEffect(() => {
     fetch("/api/amenities")
       .then((res) => res.json())
-      .then((data) => setAmenities(data))
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setAmenities(data);
+        }
+      })
       .catch(console.error);
   }, []);
-
-  useGSAP(() => {
-    if (!gridRef.current || amenities.length === 0) return;
-    const items = gridRef.current.querySelectorAll(".amenity-item");
-
-    gsap.from(items, {
-      y: 40,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.1,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: gridRef.current,
-        start: "top 80%",
-      },
-    });
-  }, [amenities]);
 
   const displayAmenities = amenities.slice(0, 8);
 
@@ -58,16 +39,14 @@ export default function AmenitiesSection() {
           description="Everything you need for a perfect stay, from relaxation to productivity."
         />
 
-        <div
-          ref={gridRef}
-          className="mt-4 grid grid-cols-2 gap-6 md:grid-cols-4"
-        >
-          {displayAmenities.map((amenity) => {
+        <div className="mt-4 grid grid-cols-2 gap-6 md:grid-cols-4">
+          {displayAmenities.map((amenity, index) => {
             const Icon = getIcon(amenity.iconName);
             return (
               <div
                 key={amenity.id}
-                className="amenity-item group cursor-pointer rounded-sm border border-cream-dark bg-white p-6 text-center transition-all duration-300 hover:border-primary hover:shadow-lg"
+                className="group cursor-pointer rounded-sm border border-cream-dark bg-white p-6 text-center transition-all duration-300 hover:border-primary hover:shadow-lg animate-fade-in-up"
+                style={{ animationDelay: `${index * 80}ms` }}
               >
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary">
                   <Icon

@@ -45,7 +45,7 @@ export default function WelcomeSection() {
             <div className="relative">
               <div className="relative z-10 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+                  src="/images/environs/006.jpg"
                   alt="LIZGAT Hotel exterior"
                   className="h-[500px] w-full object-cover"
                 />

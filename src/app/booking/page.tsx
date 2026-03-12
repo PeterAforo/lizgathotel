@@ -128,7 +128,7 @@ export default function BookingPage() {
       {/* Hero */}
       <section className="relative h-[35vh] min-h-[280px]">
         <img
-          src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1920&q=80"
+          src="/images/reception/026.jpg"
           alt="Booking"
           className="h-full w-full object-cover"
         />

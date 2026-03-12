@@ -31,8 +31,8 @@ export default function CTASection() {
     <section ref={sectionRef} className="relative h-[60vh] min-h-[400px] overflow-hidden">
       <img
         ref={bgRef}
-        src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&q=80"
-        alt="LIZGAT Hotel pool"
+        src="/images/environs/013.jpg"
+        alt="LIZGAT Hotel exterior"
         className="absolute inset-0 h-[120%] w-full object-cover"
       />
       <div className="absolute inset-0 bg-dark/70" />

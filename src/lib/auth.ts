@@ -4,6 +4,7 @@ import { compare } from "bcryptjs";
 import prisma from "./prisma";
 
 export const { auth, handlers, signIn, signOut } = NextAuth({
+  trustHost: true,
   providers: [
     Credentials({
       credentials: {
@@ -11,23 +12,34 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) return null;
+        try {
+          if (!credentials?.email || !credentials?.password) return null;
 
-        const user = await prisma.adminUser.findUnique({
-          where: { email: credentials.email as string },
-        });
+          const user = await prisma.adminUser.findUnique({
+            where: { email: credentials.email as string },
+          });
 
-        if (!user) return null;
+          if (!user) {
+            console.error("[Auth] No user found for email:", credentials.email);
+            return null;
+          }
 
-        const isValid = await compare(credentials.password as string, user.passwordHash);
-        if (!isValid) return null;
+          const isValid = await compare(credentials.password as string, user.passwordHash);
+          if (!isValid) {
+            console.error("[Auth] Invalid password for:", credentials.email);
+            return null;
+          }
 
-        return {
-          id: user.id,
-          email: user.email,
-          name: user.name,
-          role: user.role,
-        };
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            role: user.role,
+          };
+        } catch (error) {
+          console.error("[Auth] authorize error:", error);
+          return null;
+        }
       },
     }),
   ],

@@ -48,7 +48,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[300px]">
         <img
-          src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&q=80"
+          src="/images/environs/012.jpg"
           alt="About LIZGAT Hotel"
           className="h-full w-full object-cover"
         />
@@ -70,7 +70,7 @@ export default function AboutPage() {
             <AnimatedSection animation="fadeLeft">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+                  src="/images/environs/005.jpg"
                   alt="LIZGAT Hotel"
                   className="h-[450px] w-full object-cover"
                 />

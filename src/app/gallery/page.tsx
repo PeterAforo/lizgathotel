@@ -56,7 +56,7 @@ export default function GalleryPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[300px]">
         <img
-          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80"
+          src="/images/environs/011.jpg"
           alt="Gallery"
           className="h-full w-full object-cover"
         />

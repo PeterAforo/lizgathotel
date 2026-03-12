@@ -39,6 +39,18 @@ yarn-error.log*
 # vercel
 .vercel
 
+# deploy artifacts
+/deploy-patch/
+/deploy-patch.tar.gz
+/hotel_images/
+/mini-patch/
+/auth-fix.tar.gz
+/next-only-fix.tar.gz
+/scripts/deploy.ps1
+/deploy-output.tar.gz
+/mini-patch.tar.gz
+.claude/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -53,7 +53,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[300px]">
         <img
-          src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&q=80"
+          src="/images/environs/016.jpg"
           alt="Contact"
           className="h-full w-full object-cover"
         />

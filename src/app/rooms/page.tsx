@@ -30,7 +30,7 @@ export default function RoomsPage() {
       {/* Hero Banner */}
       <section className="relative h-[40vh] min-h-[300px]">
         <img
-          src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1920&q=80"
+          src="/images/rooms/room-11/080.jpg"
           alt="Rooms"
           className="h-full w-full object-cover"
         />

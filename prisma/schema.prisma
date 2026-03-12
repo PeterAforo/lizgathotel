@@ -1,10 +1,9 @@
 generator client {
-  provider      = "prisma-client-js"
-  binaryTargets = ["native", "debian-openssl-1.1.x", "debian-openssl-3.0.x", "linux-musl-openssl-3.0.x"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -48,7 +47,7 @@ model Amenity {
   id          String   @id @default(cuid())
   amenityId   String   @unique
   name        String
-  description String   @db.Text
+  description String    @db.Text
   iconName    String
   image       String
   details     Json
@@ -154,7 +153,7 @@ model NewsletterSubscriber {
 model SiteSetting {
   id    String @id @default(cuid())
   key   String @unique
-  value String @db.LongText
+  value String @db.Text
   group String @default("general")
 
   @@map("site_settings")
@@ -164,7 +163,7 @@ model PageContent {
   id        String   @id @default(cuid())
   page      String
   section   String
-  content   String   @db.LongText
+  content   String   @db.Text
   sortOrder Int      @default(0)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
