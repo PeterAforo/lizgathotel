@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
 import {
   LayoutDashboard,
   CalendarCheck,
@@ -14,26 +15,33 @@ import {
   Newspaper,
   FileText,
   Settings,
+  Users,
+  Activity,
   LogOut,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { hasPermission, type Permission } from "@/lib/permissions";
 
-const navItems = [
-  { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/admin/bookings", label: "Bookings", icon: CalendarCheck },
-  { href: "/admin/rooms", label: "Rooms", icon: Bed },
-  { href: "/admin/amenities", label: "Amenities", icon: Sparkles },
-  { href: "/admin/gallery", label: "Gallery", icon: Image },
-  { href: "/admin/dining", label: "Dining", icon: UtensilsCrossed },
-  { href: "/admin/testimonials", label: "Testimonials", icon: Star },
-  { href: "/admin/contacts", label: "Contacts", icon: Mail },
-  { href: "/admin/newsletter", label: "Newsletter", icon: Newspaper },
-  { href: "/admin/content", label: "Content", icon: FileText },
-  { href: "/admin/settings", label: "Settings", icon: Settings },
+const navItems: { href: string; label: string; icon: typeof LayoutDashboard; permission: Permission }[] = [
+  { href: "/admin", label: "Dashboard", icon: LayoutDashboard, permission: "view_dashboard" },
+  { href: "/admin/bookings", label: "Bookings", icon: CalendarCheck, permission: "view_bookings" },
+  { href: "/admin/rooms", label: "Rooms", icon: Bed, permission: "view_rooms" },
+  { href: "/admin/amenities", label: "Amenities", icon: Sparkles, permission: "view_content" },
+  { href: "/admin/gallery", label: "Gallery", icon: Image, permission: "view_content" },
+  { href: "/admin/dining", label: "Dining", icon: UtensilsCrossed, permission: "view_content" },
+  { href: "/admin/testimonials", label: "Testimonials", icon: Star, permission: "view_content" },
+  { href: "/admin/contacts", label: "Contacts", icon: Mail, permission: "view_contacts" },
+  { href: "/admin/newsletter", label: "Newsletter", icon: Newspaper, permission: "view_newsletter" },
+  { href: "/admin/content", label: "Content", icon: FileText, permission: "view_content" },
+  { href: "/admin/users", label: "Users", icon: Users, permission: "view_users" },
+  { href: "/admin/activity", label: "Activity Log", icon: Activity, permission: "view_activity_log" },
+  { href: "/admin/settings", label: "Settings", icon: Settings, permission: "view_settings" },
 ];
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const { data: session } = useSession();
+  const role = (session?.user as { role?: string })?.role || "";
 
   return (
     <aside className="fixed left-0 top-0 z-40 flex h-screen w-64 flex-col border-r border-white/10 bg-dark">
@@ -53,7 +61,7 @@ export default function Sidebar() {
       {/* Navigation */}
       <nav className="flex-1 overflow-y-auto px-3 py-4">
         <ul className="space-y-1">
-          {navItems.map((item) => {
+          {navItems.filter((item) => !role || hasPermission(role, item.permission)).map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href || (item.href !== "/admin" && pathname.startsWith(item.href));
             return (

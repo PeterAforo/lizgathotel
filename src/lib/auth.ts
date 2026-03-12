@@ -24,11 +24,31 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
             return null;
           }
 
+          if (!user.isActive) {
+            console.error("[Auth] Account deactivated:", credentials.email);
+            return null;
+          }
+
           const isValid = await compare(credentials.password as string, user.passwordHash);
           if (!isValid) {
             console.error("[Auth] Invalid password for:", credentials.email);
             return null;
           }
+
+          // Update last login time
+          await prisma.adminUser.update({
+            where: { id: user.id },
+            data: { lastLoginAt: new Date() },
+          }).catch(() => {});
+
+          // Log login activity
+          await prisma.activityLog.create({
+            data: {
+              userId: user.id,
+              action: "LOGIN",
+              target: `Admin login: ${user.email}`,
+            },
+          }).catch(() => {});
 
           return {
             id: user.id,

@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Menu, Bell, User, LogOut } from "lucide-react";
-import { signOut } from "next-auth/react";
+import { Menu, Bell, User, LogOut, Shield } from "lucide-react";
+import { signOut, useSession } from "next-auth/react";
+import { getRoleLabel } from "@/lib/permissions";
 
 interface HeaderProps {
   onMenuToggle?: () => void;
@@ -12,6 +13,10 @@ interface HeaderProps {
 export default function Header({ onMenuToggle }: HeaderProps) {
   const [showDropdown, setShowDropdown] = useState(false);
   const router = useRouter();
+  const { data: session } = useSession();
+
+  const userName = session?.user?.name || "Admin";
+  const userRole = (session?.user as { role?: string })?.role || "admin";
 
   const handleSignOut = async () => {
     await signOut({ redirect: false });
@@ -43,14 +48,25 @@ export default function Header({ onMenuToggle }: HeaderProps) {
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
               <User size={16} className="text-primary" />
             </div>
-            <span className="hidden font-body text-sm font-semibold md:inline">Admin</span>
+            <div className="hidden text-left md:block">
+              <p className="font-body text-sm font-semibold leading-tight">{userName}</p>
+              <p className="font-body text-[10px] text-gray">{getRoleLabel(userRole)}</p>
+            </div>
           </button>
 
           {showDropdown && (
-            <div className="absolute right-0 top-12 w-48 rounded-sm border border-cream-dark bg-white py-1 shadow-lg">
+            <div className="absolute right-0 top-12 w-56 rounded-sm border border-cream-dark bg-white py-1 shadow-lg">
+              <div className="border-b border-cream-dark px-4 py-3">
+                <p className="font-body text-sm font-semibold text-dark">{userName}</p>
+                <p className="font-body text-xs text-gray">{session?.user?.email}</p>
+                <div className="mt-1 flex items-center gap-1">
+                  <Shield size={10} className="text-primary" />
+                  <span className="font-body text-[10px] font-semibold text-primary">{getRoleLabel(userRole)}</span>
+                </div>
+              </div>
               <button
                 onClick={handleSignOut}
-                className="flex w-full items-center gap-2 px-4 py-2 font-body text-sm text-gray-dark transition-colors hover:bg-cream"
+                className="flex w-full items-center gap-2 px-4 py-2.5 font-body text-sm text-gray-dark transition-colors hover:bg-cream"
               >
                 <LogOut size={16} />
                 Sign Out
