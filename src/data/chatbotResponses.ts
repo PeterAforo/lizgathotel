@@ -94,7 +94,7 @@ export const chatResponses: ChatResponse[] = [
   {
     keywords: ["contact", "phone", "email", "call", "reach", "talk", "speak", "human", "staff", "reception"],
     response:
-      "📞 **Contact LIZGAT Hotel:**\n\n📱 Phone: +233 30 277 5500\n📧 Email: info@lizgathotel.com\n💬 WhatsApp: +233 20 123 4567\n\n🌐 Website: www.lizgathotel.com\n\n**Social Media:**\n📘 Facebook: /LizgatHotel\n📸 Instagram: @lizgathotel\n🐦 Twitter: @lizgathotel\n\n**Front Desk Hours:** 24/7\n\nWould you like to send us a message or make a reservation?",
+      "📞 **Contact LIZGAT Hotel:**\n\n📱 Phone: +233 24 548 2078 (Primary)\n📱 Phone: +233 54 098 6101\n📱 Phone: +233 24 002 9429\n� Phone: +233 24 222 2481\n�📧 Email: info@lizgathotel.com\n\n🌐 Website: www.lizgathotel.com\n\n**Social Media:**\n📘 Facebook: /LizgatHotel\n📸 Instagram: @lizgathotel\n🐦 Twitter: @lizgathotel\n\n**Front Desk Hours:** 24/7\n\nWould you like to send us a message or make a reservation?",
     quickReplies: [
       { label: "Send Message", value: "message" },
       { label: "Make a Booking", value: "booking" },
@@ -160,7 +160,7 @@ export const chatResponses: ChatResponse[] = [
   {
     keywords: ["cancellation", "cancel", "refund", "change", "modify"],
     response:
-      "📋 **Cancellation Policy:**\n\n✅ **Free cancellation** up to 48 hours before check-in\n⚠️ **24-48 hours:** 50% charge applies\n❌ **Less than 24 hours:** Full charge applies\n🔄 **Modifications:** Free date changes subject to availability\n\nFor cancellations or modifications, contact us at:\n📧 reservations@lizgathotel.com\n📱 +233 30 277 5500",
+      "📋 **Cancellation Policy:**\n\n✅ **Free cancellation** up to 48 hours before check-in\n⚠️ **24-48 hours:** 50% charge applies\n❌ **Less than 24 hours:** Full charge applies\n🔄 **Modifications:** Free date changes subject to availability\n\nFor cancellations or modifications, contact us at:\n📧 reservations@lizgathotel.com\n📱 +233 24 548 2078",
     quickReplies: [
       { label: "Contact Us", value: "contact" },
       { label: "Make New Booking", value: "booking" },
@@ -171,7 +171,7 @@ export const chatResponses: ChatResponse[] = [
 export const defaultResponse: ChatResponse = {
   keywords: [],
   response:
-    "I appreciate your question! While I may not have the specific answer right now, our friendly team at the front desk would love to help. You can reach us at:\n\n📱 +233 30 277 5500\n📧 info@lizgathotel.com\n\nOr would you like to know about something else?",
+    "I appreciate your question! While I may not have the specific answer right now, our friendly team at the front desk would love to help. You can reach us at:\n\n📱 +233 24 548 2078\n📧 info@lizgathotel.com\n\nOr would you like to know about something else?",
   quickReplies: [
     { label: "View Rooms", value: "rooms" },
     { label: "Hotel Amenities", value: "amenities" },

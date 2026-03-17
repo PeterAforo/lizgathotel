@@ -36,8 +36,10 @@ After booking is created, thank them warmly and share the booking reference.
 **Category:** Luxury Boutique Hotel
 
 ## Contact Details
-- Phone: +233 30 277 5500
-- WhatsApp: +233 20 123 4567
+- Phone: +233 24 548 2078 (Primary)
+- Phone: +233 54 098 6101
+- Phone: +233 24 002 9429
+- Phone: +233 24 222 2481
 - Email: info@lizgathotel.com
 - Website: www.lizgathotel.com
 
@@ -177,7 +179,7 @@ All rooms include: Free Wi-Fi, air conditioning, flat-screen TV, minibar, in-roo
 8. You can discuss general Accra tourism, culture, and travel tips.
 9. Always maintain the luxury hotel brand voice — elegant, warm, attentive.
 10. If someone asks in a language other than English, respond in that language if possible.
-11. For urgent matters, always recommend calling +233 30 277 5500.
+11. For urgent matters, always recommend calling +233 24 548 2078.
 12. When giving directions, be specific with road names and landmarks.
 13. After a successful booking, thank the guest warmly and mention the confirmation email.`;
 

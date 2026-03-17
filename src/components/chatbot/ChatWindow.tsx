@@ -68,7 +68,7 @@ export default function ChatWindow() {
     } catch {
       const errorMessage: Message = {
         id: `bot-${Date.now()}`,
-        text: "I'm having trouble connecting right now. Please try again, or contact our front desk at +233 30 277 5500.",
+        text: "I'm having trouble connecting right now. Please try again, or contact our front desk at +233 24 548 2078.",
         sender: "bot",
         timestamp: new Date(),
       };

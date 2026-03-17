@@ -110,10 +110,16 @@ export default function ContactPage() {
                         Phone
                       </h3>
                       <p className="mt-1 font-body text-sm text-gray-dark">
-                        +233 30 277 5500
+                        +233 24 548 2078 (Primary)
                       </p>
                       <p className="font-body text-sm text-gray-dark">
-                        +233 20 123 4567 (WhatsApp)
+                        +233 54 098 6101
+                      </p>
+                      <p className="font-body text-sm text-gray-dark">
+                        +233 24 002 9429
+                      </p>
+                      <p className="font-body text-sm text-gray-dark">
+                        +233 24 222 2481
                       </p>
                     </div>
                   </div>

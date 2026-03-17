@@ -88,11 +88,11 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden items-center gap-4 lg:flex">
           <a
-            href="tel:+233302775500"
+            href="tel:+233245482078"
             className="flex items-center gap-2 font-body text-sm text-white/80 transition-colors hover:text-primary"
           >
             <Phone size={14} />
-            +233 30 277 5500
+            +233 24 548 2078
           </a>
           <Link
             href="/booking"

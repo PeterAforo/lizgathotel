@@ -112,7 +112,7 @@ export default function PrivacyPolicyPage() {
                 <p>12 Liberation Road, Airport Residential Area</p>
                 <p>Accra, Ghana</p>
                 <p className="mt-2">Email: info@lizgathotel.com</p>
-                <p>Phone: +233 30 277 5500</p>
+                <p>Phone: +233 24 548 2078</p>
               </div>
             </div>
           </div>

@@ -31,7 +31,7 @@ function layout(content: string) {
       </div>
       <div style="${footerStyle}">
         <p style="margin: 0;">12 Liberation Road, Airport Residential Area, Accra, Ghana</p>
-        <p style="margin: 4px 0 0;">+233 30 277 5500 | info@lizgathotel.com</p>
+        <p style="margin: 4px 0 0;">+233 24 548 2078 | info@lizgathotel.com</p>
       </div>
     </div>
   `;
@@ -67,7 +67,7 @@ export function bookingConfirmationTemplate(booking: BookingData) {
     </div>
 
     <p style="color: #4B5563;">Check-in time is 2:00 PM and check-out time is 12:00 PM.</p>
-    <p style="color: #4B5563;">If you have any questions, please contact us at +233 30 277 5500.</p>
+    <p style="color: #4B5563;">If you have any questions, please contact us at +233 24 548 2078.</p>
     <p style="color: #4B5563;">We look forward to welcoming you!</p>
   `);
 }
@@ -91,7 +91,7 @@ export function bookingStatusUpdateTemplate(booking: BookingData) {
     </div>
 
     <p style="color: #4B5563;">${statusText}</p>
-    <p style="color: #4B5563;">For any queries, contact us at +233 30 277 5500.</p>
+    <p style="color: #4B5563;">For any queries, contact us at +233 24 548 2078.</p>
   `);
 }
 
