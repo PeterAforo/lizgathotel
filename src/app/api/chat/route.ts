@@ -49,7 +49,7 @@ After booking is created, thank them warmly and share the booking reference.
 3. Continue for about 2 km
 4. LIZGAT Hotel is on your right, in the Airport Residential Area
 5. Journey takes approximately 15 minutes by car
-6. We offer complimentary airport shuttle — just share your flight details!
+6. Taxis and ride-hailing (Uber/Bolt) are readily available at the airport.
 
 **From Accra City Center (Makola/Independence Square):**
 1. Head north on Barnes Road toward Kwame Nkrumah Avenue
@@ -83,7 +83,7 @@ After booking is created, thank them warmly and share the booking reference.
 
 **Transportation Options:**
 - Uber/Bolt: Available in Accra, affordable (~GHS 30-50 from airport)
-- Hotel Shuttle: Free for guests (pre-book with flight details)
+- Hotel: We do not currently offer an airport shuttle service
 - Taxi: Available at airport (negotiate fare, ~GHS 80-100)
 - Car Rental: Can be arranged through the hotel
 
@@ -98,18 +98,16 @@ After booking is created, thank them warmly and share the booking reference.
 All rooms include: Free Wi-Fi, air conditioning, flat-screen TV, minibar, in-room safe, daily housekeeping, complimentary breakfast, bathrobes and slippers, tea/coffee maker.
 
 ## Amenities
-- Swimming Pool: Outdoor infinity pool, open 6 AM - 10 PM, poolside bar, towels provided
-- Spa & Wellness: Traditional Ghanaian and modern treatments, couples massage, facials, body wraps
-- Fitness Center: 24/7 access, treadmills, weights, yoga mats, personal trainer on request
 - Restaurant & Bar: Fine dining, Ghanaian and international cuisine, rooftop bar with city views
 - Conference & Events: Ballroom (200 guests), garden terrace (100), meeting rooms (10-50), rooftop (80)
 - Valet Parking: Complimentary, secure underground garage, EV charging stations
-- Airport Shuttle: Free to/from Kotoka International Airport, 24/7 with pre-booking
 - Business Center: Printing, scanning, secretarial services
 - Laundry & Dry Cleaning: Same-day service available
 - Concierge: Tour bookings, restaurant reservations, car hire, city guides
 - Free High-Speed Wi-Fi: Throughout the hotel (Network: LIZGAT-Guest, up to 100 Mbps)
 - Kids Club: Activities for children (ages 4-12), babysitting available
+
+**Note:** We do NOT currently have a swimming pool, fitness center, spa/wellness center, or airport shuttle service. If a guest asks about any of these, politely let them know these are not available at the moment but that we are working on adding them in the future. Suggest nearby alternatives if appropriate.
 
 ## Dining
 - Breakfast Buffet: 6:30 AM - 10:30 AM (included with room)
@@ -139,11 +137,11 @@ All rooms include: Free Wi-Fi, air conditioning, flat-screen TV, minibar, in-roo
 
 ## Special Offers
 - Weekend Getaway: 20% off Fri-Sun stays
-- Romantic Escape: Honeymoon Suite + couples spa + dinner for two ($499)
+- Romantic Escape: Honeymoon Suite + dinner for two ($399)
 - Extended Stay: 15% off for 5+ night bookings
 - Family Fun: Kids under 12 eat free with family room booking
-- Business Package: Executive Suite + meeting room + airport transfer
-- Honeymoon Package: Suite + champagne + late checkout + spa ($599)
+- Business Package: Executive Suite + meeting room access
+- Honeymoon Package: Suite + champagne + late checkout ($499)
 - Group Discount: 10% off for 5+ rooms
 
 ## Nearby Attractions & Things to Do

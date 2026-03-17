@@ -1,11 +1,7 @@
 import {
-  Waves,
-  Sparkles,
-  Dumbbell,
   UtensilsCrossed,
   Users,
   Briefcase,
-  Plane,
   Wifi,
   ConciergeBell,
   WashingMachine,
@@ -24,54 +20,6 @@ export interface Amenity {
 }
 
 export const amenities: Amenity[] = [
-  {
-    id: "pool",
-    name: "Swimming Pool",
-    description:
-      "Dive into relaxation at our stunning outdoor infinity pool overlooking the cityscape. Open from 6 AM to 10 PM daily.",
-    icon: Waves,
-    image: "/images/environs/009.jpg",
-    details: [
-      "Outdoor infinity pool",
-      "Poolside bar and snacks",
-      "Sun loungers and cabanas",
-      "Towel service",
-      "Children's splash area",
-      "Open daily 6 AM - 10 PM",
-    ],
-  },
-  {
-    id: "spa",
-    name: "Spa & Wellness",
-    description:
-      "Rejuvenate body and mind at our world-class spa, offering traditional Ghanaian treatments alongside modern wellness therapies.",
-    icon: Sparkles,
-    image: "/images/environs/014.jpg",
-    details: [
-      "Full-body massage treatments",
-      "Facial and skin care",
-      "Traditional shea butter therapy",
-      "Steam room and sauna",
-      "Couples' treatment rooms",
-      "Yoga and meditation classes",
-    ],
-  },
-  {
-    id: "gym",
-    name: "Fitness Center",
-    description:
-      "Stay active during your stay with state-of-the-art equipment and professional trainers available upon request.",
-    icon: Dumbbell,
-    image: "/images/environs/015.jpg",
-    details: [
-      "Modern cardio equipment",
-      "Free weights area",
-      "Personal trainer available",
-      "Yoga mats and equipment",
-      "24/7 access for guests",
-      "Fresh towels and water",
-    ],
-  },
   {
     id: "restaurant",
     name: "Restaurant & Bar",
@@ -118,22 +66,6 @@ export const amenities: Amenity[] = [
       "Administrative assistance",
       "Available 24/7",
       "Complimentary coffee and tea",
-    ],
-  },
-  {
-    id: "shuttle",
-    name: "Airport Shuttle",
-    description:
-      "Enjoy seamless transfers to and from Kotoka International Airport in our comfortable shuttle service.",
-    icon: Plane,
-    image: "/images/environs/006.jpg",
-    details: [
-      "Kotoka Airport transfers",
-      "Luxury vehicle fleet",
-      "Professional drivers",
-      "Pre-booking available",
-      "City tour arrangements",
-      "24/7 availability",
     ],
   },
   {

@@ -44,7 +44,7 @@ export const chatResponses: ChatResponse[] = [
   {
     keywords: ["price", "pricing", "cost", "rate", "rates", "how much", "expensive", "cheap", "affordable"],
     response:
-      "Here are our current room rates per night:\n\n💰 **Standard Room**: $120\n💰 **Deluxe Room**: $180\n💰 **Family Room**: $220\n💰 **Executive Suite**: $280\n💰 **Honeymoon Suite**: $350\n💰 **Presidential Suite**: $450\n\nRates include breakfast, Wi-Fi, and access to pool and gym. Special rates available for extended stays and group bookings. Contact us for custom quotes!",
+      "Here are our current room rates per night:\n\n💰 **Standard Room**: $120\n💰 **Deluxe Room**: $180\n💰 **Family Room**: $220\n💰 **Executive Suite**: $280\n💰 **Honeymoon Suite**: $350\n💰 **Presidential Suite**: $450\n\nRates include breakfast and free Wi-Fi. Special rates available for extended stays and group bookings. Contact us for custom quotes!",
     quickReplies: [
       { label: "Book a Room", value: "booking" },
       { label: "Special Offers", value: "offers" },
@@ -54,11 +54,11 @@ export const chatResponses: ChatResponse[] = [
   {
     keywords: ["amenity", "amenities", "facility", "facilities", "pool", "spa", "gym", "fitness"],
     response:
-      "LIZGAT Hotel offers world-class amenities:\n\n🏊 **Swimming Pool** - Outdoor infinity pool (6 AM - 10 PM)\n💆 **Spa & Wellness** - Traditional and modern treatments\n🏋️ **Fitness Center** - 24/7 access with latest equipment\n🍽️ **Restaurant & Bar** - Fine dining with Ghanaian and international cuisine\n📋 **Conference Rooms** - Up to 200 guests\n🚗 **Valet Parking** - Complimentary for guests\n✈️ **Airport Shuttle** - Kotoka International Airport transfers\n📶 **Free Wi-Fi** - High-speed throughout the hotel\n\nWould you like more details about any specific amenity?",
+      "LIZGAT Hotel offers excellent amenities:\n\n🍽️ **Restaurant & Bar** - Fine dining with Ghanaian and international cuisine\n📋 **Conference Rooms** - Up to 200 guests\n🚗 **Valet Parking** - Complimentary for guests\n💼 **Business Center** - Printing, scanning, workspaces\n👔 **Concierge Service** - Tours, reservations, car hire\n👕 **Laundry & Dry Cleaning** - Same-day service\n📶 **Free Wi-Fi** - High-speed throughout the hotel\n🔒 **24/7 Security** - CCTV and key card access\n\nWould you like more details about any specific amenity?",
     quickReplies: [
-      { label: "Spa Services", value: "spa" },
       { label: "Restaurant Menu", value: "dining" },
-      { label: "Pool Hours", value: "pool" },
+      { label: "Conference Rooms", value: "events" },
+      { label: "Book a Room", value: "booking" },
     ],
   },
   {
@@ -74,10 +74,10 @@ export const chatResponses: ChatResponse[] = [
   {
     keywords: ["location", "address", "where", "direction", "directions", "map", "find"],
     response:
-      "📍 **LIZGAT Hotel Location:**\n\n12 Liberation Road, Airport Residential Area\nAccra, Greater Accra Region, Ghana\n\n**Nearby Landmarks:**\n- 15 min from Kotoka International Airport (KIA)\n- 10 min from Accra Mall\n- 20 min from Kwame Nkrumah Memorial Park\n- 5 min from Oxford Street (Osu)\n\nWe offer complimentary airport shuttle service. Need directions or transportation assistance?",
+      "📍 **LIZGAT Hotel Location:**\n\n12 Liberation Road, Airport Residential Area\nAccra, Greater Accra Region, Ghana\n\n**Nearby Landmarks:**\n- 15 min from Kotoka International Airport (KIA)\n- 10 min from Accra Mall\n- 20 min from Kwame Nkrumah Memorial Park\n- 5 min from Oxford Street (Osu)\n\nUber/Bolt and taxis are readily available. Need directions or transportation assistance?",
     quickReplies: [
-      { label: "Airport Shuttle", value: "shuttle" },
-      { label: "Book Transfer", value: "transfer" },
+      { label: "Get Directions", value: "directions" },
+      { label: "Transportation", value: "transport" },
       { label: "Contact Us", value: "contact" },
     ],
   },
@@ -114,7 +114,7 @@ export const chatResponses: ChatResponse[] = [
   {
     keywords: ["offer", "offers", "deal", "deals", "discount", "promo", "promotion", "special", "package"],
     response:
-      "🎁 **Current Special Offers:**\n\n🌴 **Weekend Getaway Package** - 20% off for Fri-Sun stays\n💕 **Romantic Escape** - Honeymoon Suite + spa treatment + dinner for two\n📅 **Extended Stay** - 15% off for 5+ night bookings\n👨‍👩‍👧‍👦 **Family Fun** - Kids under 12 eat free with family booking\n💼 **Business Package** - Executive Suite + meeting room access\n\nAll packages include complimentary breakfast and airport transfer. Contact us for details!",
+      "🎁 **Current Special Offers:**\n\n🌴 **Weekend Getaway Package** - 20% off for Fri-Sun stays\n💕 **Romantic Escape** - Honeymoon Suite + dinner for two\n📅 **Extended Stay** - 15% off for 5+ night bookings\n👨‍👩‍👧‍👦 **Family Fun** - Kids under 12 eat free with family booking\n💼 **Business Package** - Executive Suite + meeting room access\n\nAll packages include complimentary breakfast. Contact us for details!",
     quickReplies: [
       { label: "Book Package", value: "booking" },
       { label: "More Details", value: "contact" },
@@ -144,14 +144,14 @@ export const chatResponses: ChatResponse[] = [
     response:
       "🚗 **Parking at LIZGAT Hotel:**\n\n✅ Complimentary valet parking for all guests\n✅ Secure underground parking garage\n✅ 24/7 CCTV monitoring\n✅ EV charging stations available\n\nSimply drive up to the main entrance and our valet team will take care of the rest!",
     quickReplies: [
-      { label: "Airport Transfer", value: "shuttle" },
       { label: "Other Amenities", value: "amenities" },
+      { label: "Contact Us", value: "contact" },
     ],
   },
   {
     keywords: ["shuttle", "airport", "transfer", "transport", "taxi", "pickup", "pick up", "drop off"],
     response:
-      "✈️ **Airport Transfer Service:**\n\n**Kotoka International Airport (KIA):**\n- Distance: ~7 km (15 min drive)\n- Complimentary shuttle for all guests\n- Available 24/7 with pre-booking\n\n**How to Book:**\n1. Provide your flight details at reservation\n2. Our driver will meet you at arrivals\n3. Look for the LIZGAT Hotel sign\n\nCity tours and private car hire also available!",
+      "✈️ **Getting to LIZGAT Hotel from the Airport:**\n\n**Kotoka International Airport (KIA):**\n- Distance: ~7 km (15 min drive)\n- Uber/Bolt: ~GHS 30-50 (available at airport)\n- Taxi: ~GHS 80-100 (negotiate fare)\n\n**Note:** We do not currently offer an airport shuttle service, but our concierge can help arrange transportation for you. Car rental can also be arranged through the hotel.",
     quickReplies: [
       { label: "Book Transfer", value: "booking" },
       { label: "Hotel Location", value: "location" },

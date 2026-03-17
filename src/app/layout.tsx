@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | LIZGAT Hotel",
   },
   description:
-    "Experience luxury at LIZGAT Hotel in Accra, Ghana. Premium rooms, world-class dining, spa & wellness, and exceptional hospitality in the heart of Airport Residential Area.",
+    "Experience luxury at LIZGAT Hotel in Accra, Ghana. Premium rooms, world-class dining, conference facilities, and exceptional hospitality in the heart of Airport Residential Area.",
   keywords: [
     "luxury hotel",
     "Accra hotel",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "LIZGAT Hotel | Luxury Accommodation in Accra, Ghana",
     description:
-      "Experience luxury at LIZGAT Hotel in Accra, Ghana. Premium rooms, world-class dining, spa & wellness, and exceptional hospitality.",
+      "Experience luxury at LIZGAT Hotel in Accra, Ghana. Premium rooms, world-class dining, conference facilities, and exceptional hospitality.",
     type: "website",
     locale: "en_GH",
     siteName: "LIZGAT Hotel",

@@ -23,13 +23,13 @@ const quickLinks = [
 ];
 
 const services = [
-  "Airport Shuttle",
-  "Spa & Wellness",
   "Conference Rooms",
   "Restaurant & Bar",
-  "Swimming Pool",
-  "Fitness Center",
+  "Business Center",
   "Concierge Service",
+  "Valet Parking",
+  "Laundry Service",
+  "Free High-Speed Wi-Fi",
 ];
 
 export default function Footer() {

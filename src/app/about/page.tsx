@@ -37,7 +37,7 @@ const milestones = [
   { year: "2020", event: "LIZGAT Hotel founded in Accra" },
   { year: "2021", event: "Awarded Best New Hotel in Ghana" },
   { year: "2022", event: "Expanded with Presidential Suite wing" },
-  { year: "2023", event: "Launched world-class Spa & Wellness center" },
+  { year: "2023", event: "Opened the rooftop bar and expanded conference facilities" },
   { year: "2024", event: "Hosted over 50,000 guests from 40+ countries" },
   { year: "2025", event: "Recognized among Top 10 Hotels in West Africa" },
 ];

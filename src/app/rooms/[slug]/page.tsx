@@ -233,7 +233,7 @@ export default function RoomDetailPage() {
                       </li>
                       <li className="flex items-center gap-2">
                         <Check size={14} className="text-primary" />
-                        Airport shuttle available
+                        Free Wi-Fi included
                       </li>
                     </ul>
                   </div>
