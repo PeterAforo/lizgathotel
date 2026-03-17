@@ -46,18 +46,12 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-sm border border-primary bg-primary/10">
-            <span className="font-sans text-xl font-bold text-primary">L</span>
-          </div>
-          <div>
-            <h1 className="font-sans text-xl font-bold tracking-wider text-white">
-              LIZGAT
-            </h1>
-            <p className="-mt-1 font-body text-[10px] uppercase tracking-[0.3em] text-primary">
-              Hotel
-            </p>
-          </div>
+        <Link href="/" className="flex items-center">
+          <img
+            src="/images/logos/logo.png"
+            alt="LIZGAT Hotel"
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Nav */}

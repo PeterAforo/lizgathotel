@@ -46,6 +46,10 @@ export const metadata: Metadata = {
   authors: [{ name: "LIZGAT Hotel" }],
   creator: "McAforo",
   publisher: "LIZGAT Hotel",
+  icons: {
+    icon: "/images/logos/favicon.png",
+    apple: "/images/logos/favicon.png",
+  },
   formatDetection: {
     telephone: true,
     email: true,

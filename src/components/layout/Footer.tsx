@@ -102,20 +102,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-sm border border-primary bg-primary/10">
-                <span className="font-sans text-xl font-bold text-primary">
-                  L
-                </span>
-              </div>
-              <div>
-                <h2 className="font-sans text-xl font-bold tracking-wider">
-                  LIZGAT
-                </h2>
-                <p className="-mt-1 font-body text-[10px] uppercase tracking-[0.3em] text-primary">
-                  Hotel
-                </p>
-              </div>
+            <Link href="/" className="inline-block">
+              <img
+                src="/images/logos/v-logo.png"
+                alt="LIZGAT Hotel"
+                className="h-24 w-auto"
+              />
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-gray">
               Experience luxury and Ghanaian hospitality at its finest. LIZGAT

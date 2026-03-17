@@ -48,9 +48,11 @@ export default function Sidebar() {
       {/* Brand */}
       <div className="flex h-16 items-center border-b border-white/10 px-6">
         <Link href="/admin" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-sm border border-primary bg-primary/10">
-            <span className="font-sans text-sm font-bold text-primary">L</span>
-          </div>
+          <img
+            src="/images/logos/favicon.png"
+            alt="LIZGAT"
+            className="h-8 w-auto"
+          />
           <div>
             <span className="font-sans text-base font-bold tracking-wider text-white">LIZGAT</span>
             <span className="ml-1 font-body text-[10px] uppercase tracking-[0.2em] text-primary">Admin</span>

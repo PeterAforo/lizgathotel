@@ -39,11 +39,12 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-md px-4">
         {/* Brand */}
         <div className="mb-8 text-center">
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-sm border border-primary bg-primary/10">
-            <span className="font-sans text-2xl font-bold text-primary">L</span>
-          </div>
-          <h1 className="mt-4 font-sans text-2xl font-bold tracking-wider text-white">LIZGAT</h1>
-          <p className="font-body text-xs uppercase tracking-[0.3em] text-primary">Hotel Admin</p>
+          <img
+            src="/images/logos/v-logo.png"
+            alt="LIZGAT Hotel"
+            className="mx-auto h-24 w-auto"
+          />
+          <p className="mt-2 font-body text-xs uppercase tracking-[0.3em] text-primary">Admin Panel</p>
         </div>
 
         {/* Login Form */}
