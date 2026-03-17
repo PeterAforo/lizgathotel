@@ -217,7 +217,15 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:px-6 md:flex-row lg:px-8">
           <p className="font-body text-sm text-gray">
             &copy; {new Date().getFullYear()} LIZGAT Hotel. All rights
-            reserved.
+            reserved. Developed by{" "}
+            <a
+              href="http://www.mcaforo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary transition-colors hover:text-primary-dark"
+            >
+              McAforo
+            </a>
           </p>
           <div className="flex gap-6">
             <a
