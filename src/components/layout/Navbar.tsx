@@ -50,7 +50,7 @@ export default function Navbar() {
           <img
             src="/images/logos/logo.png"
             alt="LIZGAT Hotel"
-            className="h-20 w-auto"
+            className="h-10 w-auto"
           />
         </Link>
 
